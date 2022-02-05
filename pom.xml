@@ -74,13 +74,13 @@
 				<executions>
 					<execution>
 						<id>npm build the vue app</id>
-<!--						<phase>generate-resources</phase>-->
-						<phase>process-resources</phase>
+						<phase>generate-resources</phase>
+<!--						<phase>process-resources</phase>-->
 						<goals>
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-<!--							<workingDirectory>src/vue</workingDirectory>-->
+							<workingDirectory>src/vue</workingDirectory>
 							<executable>npm</executable>
 							<arguments>
 								<argument>run</argument>
@@ -91,28 +91,28 @@
 				</executions>
 			</plugin>
 
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-resources-plugin</artifactId>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>Copy my VueJS app into my Spring Boot target static folder</id>-->
-<!--						<phase>process-resources</phase>-->
-<!--						<goals>-->
-<!--							<goal>copy-resources</goal>-->
-<!--						</goals>-->
-<!--						<configuration>-->
-<!--							<outputDirectory>target/classes/static</outputDirectory>-->
-<!--							<resources>-->
-<!--								<resource>-->
-<!--									<directory>src/vue/dist</directory>-->
-<!--									<filtering>true</filtering>-->
-<!--								</resource>-->
-<!--							</resources>-->
-<!--						</configuration>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>Copy my VueJS app into my Spring Boot target static folder</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/classes/static</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/vue/dist</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
