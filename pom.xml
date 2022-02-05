@@ -60,7 +60,7 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<workingDirectory>src/main/resources/static</workingDirectory>
+							<workingDirectory>src/vue</workingDirectory>
 							<executable>npm</executable>
 							<arguments>
 								<argument>run</argument>
@@ -85,7 +85,7 @@
 							<outputDirectory>target/classes/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/main/resources/static/dist</directory>
+									<directory>src/vue/dist</directory>
 									<filtering>true</filtering>
 								</resource>
 							</resources>
