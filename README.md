@@ -9,4 +9,12 @@ In the application.properties or application.yml add property e.g. "server.port:
 Create vue application e.g. in the folder static in the resources.
 Add appropriate properties to the pom.xml.
 Run command "npm run build" in the folder with vue app. This command should generate "dist" directory in the folder with vue app.
-From main folder run command "./mvnw clean package". This command should generate jar file, which can run with frontend and backend app.
+From main folder run command "./mvnw clean package" (mvn clean package). This command should generate jar file, which can run with frontend and backend app.
+
+### Set up docker image
+Add Dockerfile and within as example in the main folder
+
+FROM openjdk:17
+EXPOSE 8080
+ADD target/docker-demo.jar docker-demo.jar
+ENTRYPOINT ["java", "-jar", "docker-demo.jar"]
