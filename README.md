@@ -16,5 +16,15 @@ Add Dockerfile and within as example in the main folder
 
 FROM openjdk:17
 EXPOSE 8080
-ADD target/docker-demo.jar docker-demo.jar
-ENTRYPOINT ["java", "-jar", "docker-demo.jar"]
+ADD target/spring-heroku.jar spring-heroku.jar
+ENTRYPOINT ["java", "-jar", "spring-heroku.jar"]
+
+Then do below comments:
+- heroku login -i
+- heroku container:login
+- heroku container:push web --app <name of app>
+- heroku container:release web --app <name of app>
+- heroku container:rem web --app <name of app> (optional to remove and push one more time image)
+
+To build docker image use "docker build -t spring-heroku.jar ." command.
+See all images use "docker images" command. Remove particular image use "docker image rm <image name>" command.
