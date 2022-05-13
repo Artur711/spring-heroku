@@ -24,7 +24,7 @@ Then do below comments:
 - heroku container:login
 - heroku container:push web --app <name of app>
 - heroku container:release web --app <name of app>
-- heroku container:rem web --app <name of app> (optional to remove and push one more time image)
+- heroku container:rm web --app <name of app> (optional to remove and push one more time image)
 
 To build docker image use "docker build -t spring-heroku.jar ." command.
 See all images use "docker images" command. Remove particular image use "docker image rm <image name>" command.

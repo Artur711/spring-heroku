@@ -9,5 +9,4 @@ public class SpringHerokuApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringHerokuApplication.class, args);
 	}
-
 }
